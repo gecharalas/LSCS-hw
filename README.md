@@ -90,7 +90,7 @@ Verification checksum: 954318 (Valid)
 
 ### Βήμα 2: Μελέτη της Κλιμάκωσης του XSBench
 
-Για το βήμα 2 εκτελούμε το run_xsbench.sh
+### Eκτελούμε το run_xsbench.sh
 
 ### Χρόνοι Εκτέλεσης
 
@@ -117,7 +117,7 @@ Verification checksum: 954318 (Valid)
 
 ### Αναφορά Βήματος 3: Μελέτη της Συμπεριφοράς του XSBench
 
-Για το βήμα 3 εκτελούμε το run_perf_xsbench.sh
+### Eκτελούμε το run_perf_xsbench.sh
 
 #### Πειραματικά Δεδομένα
 
@@ -271,7 +271,7 @@ int main(int argc, char *argv[]) {
 ```
 #### BHMA 4A Εκτέλεση memory_stress_lim με Διαφορετικά Μεγέθη Μνήμης και 1000 Επαναλήψεις
 
-Για το βήμα 4Α εκτελούμε το memory_stress_lim_perf.sh
+### Eκτελούμε το memory_stress_lim_perf.sh
 
 Κατά τη διάρκεια των πειραμάτων, εκτελέσαμε το πρόγραμμα `memory_stress_lim` με τρία διαφορετικά μεγέθη μνήμης: 100MB, 200MB και 400MB, με 1000 επαναλήψεις. Συλλέξαμε τις μετρικές απόδοσης χρησιμοποιώντας το εργαλείο `perf stat`.
 
@@ -312,7 +312,7 @@ int main(int argc, char *argv[]) {
 
 #### ΒΗΜΑ 4Β Αποτελέσματα Πειραμάτων XSBench (3 Διαφορετικά Σενάρια)
 
-Για το βήμα 4Β εκτελούμε τα memory_xsbench_same_core.sh και memory_xsbench_different_cores.sh
+### Eκτελούμε τα memory_xsbench_same_core.sh και memory_xsbench_different_cores.sh
 
 Παρακάτω παρουσιάζονται τα αποτελέσματα των πειραμάτων για τα διάφορα σενάρια και μεγέθη μνήμης.
 
