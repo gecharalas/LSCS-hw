@@ -1,5 +1,3 @@
-# Makefile for compiling memory_stress_lim.c and memory_stress.c
-
 # Compiler
 CC = gcc
 
