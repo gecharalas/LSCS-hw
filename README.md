@@ -117,7 +117,7 @@ Verification checksum: 954318 (Valid)
 
 ### Αναφορά Βήματος 3: Μελέτη της Συμπεριφοράς του XSBench
 
-### Eκτελούμε το run_perf_xsbench.sh
+'run_perf_xsbench.sh'
 
 #### Πειραματικά Δεδομένα
 
