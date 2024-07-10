@@ -271,7 +271,7 @@ int main(int argc, char *argv[]) {
 ```
 #### BHMA 4A Εκτέλεση memory_stress_lim με Διαφορετικά Μεγέθη Μνήμης και 1000 Επαναλήψεις
 
-### Eκτελούμε το memory_stress_lim_perf.sh
+`memory_stress_lim_perf.sh`
 
 Κατά τη διάρκεια των πειραμάτων, εκτελέσαμε το πρόγραμμα `memory_stress_lim` με τρία διαφορετικά μεγέθη μνήμης: 100MB, 200MB και 400MB, με 1000 επαναλήψεις. Συλλέξαμε τις μετρικές απόδοσης χρησιμοποιώντας το εργαλείο `perf stat`.
 
@@ -312,7 +312,7 @@ int main(int argc, char *argv[]) {
 
 #### ΒΗΜΑ 4Β Αποτελέσματα Πειραμάτων XSBench (3 Διαφορετικά Σενάρια)
 
-### Eκτελούμε τα memory_xsbench_same_core.sh και memory_xsbench_different_cores.sh
+`memory_xsbench_same_core.sh` και `memory_xsbench_different_cores.sh`
 
 Παρακάτω παρουσιάζονται τα αποτελέσματα των πειραμάτων για τα διάφορα σενάρια και μεγέθη μνήμης.
 
