@@ -90,7 +90,7 @@ Verification checksum: 954318 (Valid)
 
 ### Βήμα 2: Μελέτη της Κλιμάκωσης του XSBench
 
-### Eκτελούμε το run_xsbench.sh
+`run_xsbench.sh`
 
 ### Χρόνοι Εκτέλεσης
 
@@ -117,7 +117,7 @@ Verification checksum: 954318 (Valid)
 
 ### Αναφορά Βήματος 3: Μελέτη της Συμπεριφοράς του XSBench
 
-'run_perf_xsbench.sh'
+`run_perf_xsbench.sh`
 
 #### Πειραματικά Δεδομένα
 
