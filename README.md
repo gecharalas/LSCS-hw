@@ -12,6 +12,65 @@
 - **Λειτουργικό Σύστημα:** Ubuntu 24.04 LTS
 - **Μεταγλωττιστής:** GCC 13.2.0
 
+### Εκτέλεση του XSBench με τα default values
+
+Το XSBench εκτελέστεκη με τα default values (εντολή ./XSBench).
+
+
+```c
+giorgio@giorgio-Z97P-D3:~/Documents/XSBench/openmp-threading$ ./XSBench
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     11,303
+Unionized Energy Gridpoints:  4,012,565
+Particle Histories:           500,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      4
+Est. Memory Usage (MB):       5,649
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 5648 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     4
+Runtime:     24.544 seconds
+Lookups:     17,000,000
+Lookups/s:   692,636
+Verification checksum: 954318 (Valid)
+================================================================================
+```
+
 ### Βήμα 2: Μελέτη της Κλιμάκωσης του XSBench
 
 ### Χρόνοι Εκτέλεσης
