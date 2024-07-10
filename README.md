@@ -163,7 +163,6 @@ Verification checksum: 954318 (Valid)
 Το πρόγραμμα `memory_stress_lim.c` δέχεται ως είσοδο το μέγεθος της μνήμης και τον αριθμό των επαναλήψεων που θα εκτελέσει ο βρόχος, επιτρέποντας τον καθορισμό ενός συγκεκριμένου αριθμού επαναλήψεων για το στρεσάρισμα της μνήμης.
 
 ```c
-// memory_stress.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/mman.h>
@@ -221,7 +220,6 @@ int main(int argc, char *argv[]) {
 ```
 
 ```c
-// memory_stress_lim.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/mman.h>
