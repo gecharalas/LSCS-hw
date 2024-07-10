@@ -14,8 +14,7 @@
 
 ### Εκτέλεση του XSBench με τα default values
 
-Το XSBench εκτελέστεκη με τα default values (εντολή ./XSBench).
-
+Εκτελέσαμε το XSBench με τα default values.
 
 ```c
 giorgio@giorgio-Z97P-D3:~/Documents/XSBench/openmp-threading$ ./XSBench
