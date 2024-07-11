@@ -3,7 +3,7 @@
 
 ### ΣΗΜΑΝΤΙΚΟ: 
 - Το README.md είναι ιδιαίτερα πιο ευανάγνωστο στο github.
-- Βρείτε το project εδώ https://github.com/GeorgiosCharalampidis/LSCS-hw.git 
+- Βρείτε το project εδώ: https://github.com/GeorgiosCharalampidis/LSCS-hw.git 
 
 ### Σημείωση:
 
