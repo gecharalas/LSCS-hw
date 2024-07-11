@@ -3,7 +3,7 @@
 
 ### Σημείωση:
 
-- Όλα τα αρχεία πρέπει να βρίσκονται στο directory /XSBench/openmp-threading για να εκτελεστούν.
+- Όλα τα αρχεία (scripts, προγράμματα, makefile) πρέπει να βρίσκονται στο directory /XSBench/openmp-threading.
 - Η μεταγλώττιση των προγραμμάτων `memory_stress.c` και `memory_stress_lim.c` γίνεται με την εντολή `make -f STRESSmakefile` (Υπάρχει ήδη το makefile για το openmp-threading στο ίδιο directory)
 
 ### Υπολογιστικό Σύστημα
