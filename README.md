@@ -489,5 +489,24 @@ int main(int argc, char *argv[]) {
 
 Η χρήση του THP σε συνδυασμό με την εκτέλεση σε freshly booted σύστημα φαίνεται να προσφέρει την καλύτερη απόδοση για το XSBench.
 
+### Βήμα 6: Μελέτη του Αντίκτυπου του Μηχανισμού της Κλιμάκωσης της Συχνότητας
+
+Εκτελώντας την εντολή ```bash cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor``` είδαμε ότι ο τρέχων frequency governor είναι ο `schedutil`. ο οποίος προσαρμόζει τη συχνότητα του επεξεργαστή δυναμικά ανάλογα με το φορτίο.
+
+### Αλλαγή του Governor σε Performance
+
+```bash
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+
+Στη συνέχεια, εκτελέστε τα πειράματα με τα scripts `memory_xsbench_same_core.sh` και `memory_xsbench_different_cores.sh` και καταγράψτε τα αποτελέσματα.
+
+### Αλλαγή του Governor σε Powersave
+
+```bash
+echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+
+Εκτελέστε ξανά τα πειράματα με τα ίδια scripts και καταγράψτε τα αποτελέσματα.
 
 
