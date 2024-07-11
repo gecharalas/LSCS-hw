@@ -491,12 +491,11 @@ int main(int argc, char *argv[]) {
 
 ### Βήμα 6: Μελέτη του Αντίκτυπου του Μηχανισμού της Κλιμάκωσης της Συχνότητας
 
-### Τρέχω Governor
+Για τα πειράματα του βήματος 6 κρατήσαμε το THP ενεργοποιημένο
 
-```bash
-cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-```
-Εκτελώντας την παραπάνω εντολή είδαμε ότι ο τρέχων frequency governor είναι ο `schedutil`. ο οποίος προσαρμόζει τη συχνότητα του επεξεργαστή δυναμικά ανάλογα με το φορτίο.
+### Τρέχων Governor
+
+Εκτελώντας την εντολή ```bash cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor``` είδαμε ότι ο τρέχων frequency governor είναι ο `schedutil`. ο οποίος προσαρμόζει τη συχνότητα του επεξεργαστή δυναμικά ανάλογα με το φορτίο.
 
 ### Αλλαγή του Governor σε Performance
 
@@ -504,7 +503,7 @@ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
-Στη συνέχεια, εκτελέστε τα πειράματα με τα scripts `memory_xsbench_same_core.sh` και `memory_xsbench_different_cores.sh` και καταγράψτε τα αποτελέσματα.
+Στη συνέχεια, εκτελέστε τα πειράματα με τα scripts `memory_xsbench_same_core.sh` και `memory_xsbench_different_cores.sh` και καταγράψτε τα αποτελέσματα. 
 
 ### Αλλαγή του Governor σε Powersave
 
