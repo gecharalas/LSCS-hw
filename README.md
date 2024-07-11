@@ -1,10 +1,12 @@
 #### Ονοματεπώνυμο: Χαραλαμπίδης Γεώργιος
 #### Αριθμός Μητρώου: 1115201600193
 
+### ΣΗΜΑΝΤΙΚΟ: 
+- Το README.md είναι ιδιαίτερα πιο ευανάγνωστο στο github.
+- Βρείτε το project εδώ https://github.com/GeorgiosCharalampidis/LSCS-hw.git 
+
 ### Σημείωση:
 
-- ΣΗΜΑΝΤΙΚΟ: Το README.md είναι ιδιαίτερα πιο ευανάγνωστο στο github.
-  Βρείτε το project εδώ https://github.com/GeorgiosCharalampidis/LSCS-hw.git 
 - Όλα τα αρχεία (scripts, προγράμματα, makefile) πρέπει να βρίσκονται στο directory /XSBench/openmp-threading.
 - Η μεταγλώττιση των προγραμμάτων `memory_stress.c` και `memory_stress_lim.c` γίνεται με την εντολή `make -f STRESSmakefile` (Υπάρχει ήδη το makefile για το openmp-threading στο ίδιο directory)
 
