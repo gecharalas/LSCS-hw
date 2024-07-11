@@ -548,8 +548,6 @@ echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 | 200MB          | 102.671              | 80,628,109,916   | 7,994,231,801 | 3.95              | 3,970,480,217    | 88.74             | 16,561,561,825 | 27.98                      | 16,565,066,622| 0.23                 | 236,401    | 123.99                |
 | 400MB          | 103.695              | 80,647,189,817   | 8,002,720,106 | 3.94              | 4,014,272,308    | 87.76             | 16,580,138,060 | 28.09                      | 16,557,513,378| 0.24                 | 214,252    | 147.15                |
 
-### Συμπεράσματα
-
 #### Χρόνος Εκτέλεσης
 
 - Ο `performance` governor μειώνει σημαντικά τον χρόνο εκτέλεσης συγκριτικά με τον `powersave` governor.
@@ -557,17 +555,34 @@ echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 #### Κατανάλωση Ενέργειας
 
-- Οι μετρήσεις με τους performance counters δείχνουν ότι η κατανάλωση ενέργειας είναι υψηλότερη στον `performance` governor λόγω των υψηλότερων συχνοτήτων.
-- Ο `powersave` governor μειώνει την κατανάλωση ενέργειας, αλλά με κόστος την απόδοση.
+Για την μέτρηση της κατανάλωσης ενέργειας χρησιμοποιήσαμε την εντολή `sudo perf stat -e power/energy-pkg/,power/energy-cores/,power/energy-ram/ -a sleep 10` όσο έτρεχαν παράλληλα τα αντίστοιχα scripts σε κάθε περίπτωση.
 
-#### Συμπεράσματα
+### Πίνακας Κατανάλωσης Ενέργειας
 
-1. **Χρόνος Εκτέλεσης**:
-   - Ο `performance` governor είναι πιο αποδοτικός όσον αφορά την ταχύτητα εκτέλεσης, ιδιαίτερα όταν οι διεργασίες εκτελούνται σε διαφορετικούς πυρήνες.
+| Governor   | Εκτέλεση           | energy-pkg (J) | energy-cores (J) | energy-ram (J) | Χρόνος Εκτέλεσης (s) |
+|------------|--------------------|----------------|------------------|----------------|----------------------|
+| Performance| XSBench (same core) | 277.88         | 153.46           | 19.66          | 10.01296             |
+| Performance| XSBench (diff cores) | 341.26         | 213.78           | 20.76          | 10.00607             |
+| Powersave  | XSBench (same core) | 94.40          | 9.89             | 15.00          | 10.02080             |
+| Powersave  | XSBench (diff cores) | 111.53         | 24.90            | 15.42          | 10.01529             |
 
-2. **Κατανάλωση Ενέργειας**:
-   - Η κατανάλωση ενέργειας είναι υψηλότερη στον `performance` governor λόγω των υψηλότερων συχνοτήτων της CPU. 
-   - Ο `powersave` governor επιτυγχάνει σημαντική εξοικονόμηση ενέργειας, αλλά με σημαντική αύξηση στον χρόνο εκτέλεσης.
+### Σύγκριση Κατανάλωσης Ενέργειας
+
+1. **Συνολική Ενέργεια (energy-pkg)**:
+   - Στο `performance` mode, η συνολική κατανάλωση ενέργειας (energy-pkg) είναι σημαντικά υψηλότερη από το `powersave` mode.
+     - Same core: 277.88 Joules (performance) vs 94.40 Joules (powersave)
+     - Different cores: 341.26 Joules (performance) vs 111.53 Joules (powersave)
+
+2. **Ενέργεια από Πυρήνες (energy-cores)**:
+   - Η κατανάλωση ενέργειας των πυρήνων είναι επίσης πολύ υψηλότερη στο `performance` mode.
+     - Same core: 153.46 Joules (performance) vs 9.89 Joules (powersave)
+     - Different cores: 213.78 Joules (performance) vs 24.90 Joules (powersave)
+
+3. **Ενέργεια από RAM (energy-ram)**:
+   - Η κατανάλωση ενέργειας από τη RAM είναι ελαφρώς υψηλότερη στο `performance` mode.
+     - Same core: 19.66 Joules (performance) vs 15.00 Joules (powersave)
+     - Different cores: 20.76 Joules (performance) vs 15.42 Joules (powersave)
+
 
 Συμπερασματικά, η επιλογή του frequency governor εξαρτάται από το επιθυμητό trade-off μεταξύ απόδοσης και κατανάλωσης ενέργειας. Ο `performance` governor είναι προτιμότερος για εφαρμογές που απαιτούν μέγιστη απόδοση, ενώ ο `powersave` governor είναι κατάλληλος για εφαρμογές που προτιμούν την εξοικονόμηση ενέργειας.
 
