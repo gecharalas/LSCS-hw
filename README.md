@@ -1,8 +1,10 @@
 #### Ονοματεπώνυμο: Χαραλαμπίδης Γεώργιος
 #### Αριθμός Μητρώου: 1115201600193
 
-### Σημείωση: - Όλα τα αρχεία πρέπει να βρίσκονται στο directory /XSBench/openmp-threading για να εκτελεστούν.
-###           - Η μεταγλώττιση των προγραμμάτων `memory_stress.c` και `memory_stress_lim.c` γίνεται με την εντολή `make -f STRESSmakefile` (Υπάρχει ήδη το makefile για το openmp-threading στο ίδιο directory)
+### Σημείωση:
+
+- Όλα τα αρχεία πρέπει να βρίσκονται στο directory /XSBench/openmp-threading για να εκτελεστούν.
+- Η μεταγλώττιση των προγραμμάτων `memory_stress.c` και `memory_stress_lim.c` γίνεται με την εντολή `make -f STRESSmakefile` (Υπάρχει ήδη το makefile για το openmp-threading στο ίδιο directory)
 
 ### Υπολογιστικό Σύστημα
 
