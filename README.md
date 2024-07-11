@@ -491,7 +491,9 @@ int main(int argc, char *argv[]) {
 
 ### Βήμα 6: Μελέτη του Αντίκτυπου του Μηχανισμού της Κλιμάκωσης της Συχνότητας
 
-Εκτελώντας την εντολή ```bash cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor``` είδαμε ότι ο τρέχων frequency governor είναι ο `schedutil`. ο οποίος προσαρμόζει τη συχνότητα του επεξεργαστή δυναμικά ανάλογα με το φορτίο.
+Εκτελώντας την εντολή ```bash 
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+``` είδαμε ότι ο τρέχων frequency governor είναι ο `schedutil`. ο οποίος προσαρμόζει τη συχνότητα του επεξεργαστή δυναμικά ανάλογα με το φορτίο.
 
 ### Αλλαγή του Governor σε Performance
 
