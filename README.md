@@ -115,7 +115,7 @@ Verification checksum: 954318 (Valid)
 Η αύξηση της απόδοσης με περισσότερα νήματα είναι σημαντική, ωστόσο παρατηρούμε ότι η επιτάχυνση δεν είναι τέλεια γραμμική, κάτι που είναι αναμενόμενο λόγω των επιπτώσεων της πολυνηματικής εκτέλεσης στους κοινούς πόρους του συστήματος, όπως η μνήμη cache και οι TLBs.
 
 
-### Αναφορά Βήματος 3: Μελέτη της Συμπεριφοράς του XSBench
+### Βήμα 3: Μελέτη της Συμπεριφοράς του XSBench
 
 `run_perf_xsbench.sh`
 
@@ -151,10 +151,6 @@ Verification checksum: 954318 (Valid)
 ### Βήμα 4: Μελέτη του Ανταγωνισμού στους Κοινόχρηστους Πόρους
 
 #### Δημιουργία προγραμμάτων memory_stress και memory_stress_lim
-
-### Βήμα 4: Μελέτη του Ανταγωνισμού στους Κοινόχρηστους Πόρους
-
-#### Προγράμματα C
 
 Δημιουργήσαμε δύο προγράμματα σε γλώσσα C με στόχο να στρεσάρουν το σύστημα μνήμης του επεξεργαστή μας: `memory_stress.c` και `memory_stress_lim.c`. 
 
@@ -344,12 +340,11 @@ int main(int argc, char *argv[]) {
 
 ### Βήμα 5: Μελέτη του αντίκτυπου του μηχανισμού των μεγάλων (2ΜΒ) σελίδων
 
-Αρχικά απενεργοποιήσαμε το THP με την εντολή `echo never | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
-`
+Αρχικά απενεργοποιήσαμε το THP με την εντολή `echo never | sudo tee /sys/kernel/mm/transparent_hugepage/enabled`
+
 Έπειτα τρέξαμε τα δύο scripts `memory_xsbench_same_core.sh` και `memory_xsbench_different_cores.sh`.
 
-Ενεργοποίησαμε ύστερα το THP με την εντολή `echo always | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
-` και τρέξαμε ξανά τα δύο scripts.
+Ενεργοποίησαμε ύστερα το THP με την εντολή `echo always | sudo tee /sys/kernel/mm/transparent_hugepage/enabled` και τρέξαμε ξανά τα δύο scripts.
 
 ### FRESHLY BOOTED
 
