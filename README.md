@@ -1,10 +1,3 @@
-#### Ονοματεπώνυμο: Χαραλαμπίδης Γεώργιος
-#### Αριθμός Μητρώου: 1115201600193
-
-### ΣΗΜΑΝΤΙΚΟ: 
-- Το README.md είναι ιδιαίτερα πιο ευανάγνωστο στο github.
-- Δείτε το project εδώ: https://github.com/GeorgiosCharalampidis/LSCS-hw.git 
-
 ### Σημείωση:
 
 - Όλα τα αρχεία (scripts, προγράμματα, makefile) πρέπει να βρίσκονται στο directory /XSBench/openmp-threading.
